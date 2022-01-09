@@ -321,7 +321,7 @@ const Chat = ({
             className="react-chatbot-kit-chat-input-form"
             onSubmit={handleSubmit}
           >
-            <input
+            <textarea
               className="react-chatbot-kit-chat-input"
               placeholder="Hi!"
               value={input}
