@@ -271,6 +271,15 @@ const Chat = ({
     placeholder = placeholderText;
   }
 
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const onEnterPress = (e) => {
+    if (e.keyCode == 13 && e.shiftKey == false) {
+      e.preventDefault();
+      formRef.current.submit();
+    }
+  };
+
   return (
     <div className="react-chatbot-kit-chat-container">
       <div className="react-chatbot-kit-chat-inner-container">
@@ -305,6 +314,7 @@ const Chat = ({
 
         <div className="react-chatbot-kit-chat-input-container">
           <form
+            ref={formRef}
             className="react-chatbot-kit-chat-input-form"
             onSubmit={handleSubmit}
           >
@@ -313,6 +323,7 @@ const Chat = ({
               placeholder={placeholder}
               value={input}
               onChange={(e) => setInputValue(e.target.value)}
+              onKeyDown={onEnterPress}
             />
             <button
               className="react-chatbot-kit-chat-btn-send"
