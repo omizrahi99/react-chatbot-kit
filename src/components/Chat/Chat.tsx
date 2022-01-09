@@ -272,14 +272,10 @@ const Chat = ({
   }
 
   const formRef = useRef<HTMLFormElement>(null);
-  console.log('YO!');
   const onEnterPress = (e) => {
-    console.log('test');
-    console.log(e);
     if (e.key === 'Enter') {
       console.log('enter key pressed');
-      e.preventDefault();
-      formRef.current.submit();
+      handleSubmit(e);
     }
   };
 
