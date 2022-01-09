@@ -272,7 +272,7 @@ const Chat = ({
   }
 
   const formRef = useRef<HTMLFormElement>(null);
-
+  console.log('YO!');
   const onEnterPress = (e) => {
     console.log('test');
     if (e.key === 'Enter') {
@@ -325,7 +325,7 @@ const Chat = ({
               placeholder={placeholder}
               value={input}
               onChange={(e) => setInputValue(e.target.value)}
-              onKeyPress={onEnterPress}
+              onKeyPress={(e) => onEnterPress(e)}
             />
             <button
               className="react-chatbot-kit-chat-btn-send"
