@@ -322,7 +322,7 @@ const Chat = ({
           >
             <textarea
               className="react-chatbot-kit-chat-input"
-              placeholder={placeholder}
+              placeholder="Hi!"
               value={input}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyPress={(e) => onEnterPress(e)}
