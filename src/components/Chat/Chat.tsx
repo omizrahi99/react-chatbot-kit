@@ -274,6 +274,7 @@ const Chat = ({
   const formRef = useRef<HTMLFormElement>(null);
 
   const onEnterPress = (e) => {
+    console.log('test');
     if (e.keyCode == 13 && e.shiftKey == false) {
       e.preventDefault();
       formRef.current.submit();
