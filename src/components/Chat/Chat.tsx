@@ -275,6 +275,7 @@ const Chat = ({
   console.log('YO!');
   const onEnterPress = (e) => {
     console.log('test');
+    console.log(e);
     if (e.key === 'Enter') {
       console.log('enter key pressed');
       e.preventDefault();
