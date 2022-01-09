@@ -324,7 +324,9 @@ const Chat = ({
               placeholder={placeholder}
               value={input}
               onChange={(e) => setInputValue(e.target.value)}
-              onKeyDown={onEnterPress}
+              onKeyUp={(event) => {
+                onEnterPress(event);
+              }}
             />
             <button
               className="react-chatbot-kit-chat-btn-send"
